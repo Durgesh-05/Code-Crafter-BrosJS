@@ -1,0 +1,35 @@
+{
+  "name": "suraksha-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^6.12.5",
+    "@clerk/themes": "^2.2.21",
+    "@google/generative-ai": "^0.24.0",
+    "@googlemaps/js-api-loader": "^1.16.8",
+    "@react-google-maps/api": "^2.20.6",
+    "axios": "^1.8.3",
+    "chart.js": "^4.4.8",
+    "framer-motion": "^12.5.0",
+    "lucide-react": "^0.482.0",
+    "next": "15.2.2",
+    "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.2",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.2",
+    "tailwindcss": "^4"
+  }
+}
