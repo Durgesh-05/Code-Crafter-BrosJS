@@ -60,6 +60,7 @@ function Page() {
     };
 
     const onVideoResult = async (data) => {
+      console.log('Video Data ', data);
       setVideoResults((prev) => [data, ...prev]);
 
       if (data.address) {
