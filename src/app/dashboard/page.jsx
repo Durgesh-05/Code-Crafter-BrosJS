@@ -113,7 +113,7 @@ function Page() {
 
       const apiKey =
         process.env.NEXT_PUBLIC_GEMINI_API_KEY ||
-        'AIzaSyBVs0BxoT3Xi27NEic7b0wWT_hlc-9NE9A';
+        'AIzaSyDB9gtQuwLTOsAxOQFsfD4I2Hc_QNx6d_A';
       const genAI = new GoogleGenerativeAI(apiKey);
 
       const model = genAI.getGenerativeModel({

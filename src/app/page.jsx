@@ -27,6 +27,16 @@ const HeroSection = () => {
             <button
               className='font-semibold text-green-600 shadow-2xl bg-amber-200 px-4 py-2 rounded-xl hover:cursor-pointer'
               onClick={() => {
+                router.push('/summary');
+              }}
+            >
+              Summary
+            </button>
+          </div>
+          <div className='space-x-4'>
+            <button
+              className='font-semibold text-green-600 shadow-2xl bg-amber-200 px-4 py-2 rounded-xl hover:cursor-pointer'
+              onClick={() => {
                 router.push('/analytics');
               }}
             >
