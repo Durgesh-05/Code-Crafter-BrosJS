@@ -26,20 +26,20 @@ processing_thread = None
 is_processing = False
 
 Global_dataset = [
-    {"video_id": "V_11.mp4", "path": "dataset/V_11.mp4", "address":"Parvati angan apartment badlapur, Mumbai"},
-    {"video_id": "V_100.mp4", "path": "dataset/V_100.mp4", "address":"BarhalGanj Gorakhpur, Uttarpradesh"},
-    {"video_id": "V_101.mp4", "path": "dataset/V_101.mp4", "address": "12, MG Road, Bangalore, Karnataka"},
-    {"video_id": "V_102.mp4", "path": "dataset/V_102.mp4", "address": "45, Park Street, Kolkata, West Bengal"},
-    {"video_id": "NV.mp4", "path": "dataset/NV.mp4", "address": "45, Park Street, Kolkata, West Bengal"},
-    {"video_id": "V_103.mp4", "path": "dataset/V_103.mp4", "address": "78, Anna Salai, Chennai, Tamil Nadu"},
-    {"video_id": "V_104.mp4", "path": "dataset/V_104.mp4", "address": "101, Banjara Hills, Hyderabad, Telangana"},
-    {"video_id": "V_105.mp4", "path": "dataset/V_105.mp4", "address": "22, Sector 17, Chandigarh, Punjab"},
-    {"video_id": "V_106.mp4", "path": "dataset/V_106.mp4", "address": "6, Ashram Road, Ahmedabad, Gujarat"},
-    {"video_id": "V_107.mp4", "path": "dataset/V_107.mp4", "address": "99, Civil Lines, Jaipur, Rajasthan"},
-    {"video_id": "V_108.mp4", "path": "dataset/V_108.mp4", "address": "33, Hazratganj, Lucknow, Uttar Pradesh"},
-    {"video_id": "V_109.mp4", "path": "dataset/V_109.mp4", "address": "56, Ernakulam South, Kochi, Kerala"},
-    {"video_id": "V_110.mp4", "path": "dataset/V_110.mp4", "address": "8, Shivaji Nagar, Pune, Maharashtra"},
-    {"video_id": "V_1000.mp4", "path": "dataset/V_1000.mp4", "address": "25, Lal Chowk, Srinagar, Jammu and Kashmir"}
+    {"video_id": "V_11.mp4", "path": "../dataset/V_11.mp4", "address":"Parvati angan apartment badlapur, Mumbai"},
+    {"video_id": "V_100.mp4", "path": "../dataset/V_100.mp4", "address":"BarhalGanj Gorakhpur, Uttarpradesh"},
+    {"video_id": "V_101.mp4", "path": "../dataset/V_101.mp4", "address": "12, MG Road, Bangalore, Karnataka"},
+    {"video_id": "V_102.mp4", "path": "../dataset/V_102.mp4", "address": "45, Park Street, Kolkata, West Bengal"},
+    {"video_id": "NV.mp4", "path": "../dataset/NV.mp4", "address": "45, Park Street, Kolkata, West Bengal"},
+    {"video_id": "V_103.mp4", "path": "../dataset/V_103.mp4", "address": "78, Anna Salai, Chennai, Tamil Nadu"},
+    {"video_id": "V_104.mp4", "path": "../dataset/V_104.mp4", "address": "101, Banjara Hills, Hyderabad, Telangana"},
+    {"video_id": "V_105.mp4", "path": "../dataset/V_105.mp4", "address": "22, Sector 17, Chandigarh, Punjab"},
+    {"video_id": "V_106.mp4", "path": "../dataset/V_106.mp4", "address": "6, Ashram Road, Ahmedabad, Gujarat"},
+    {"video_id": "V_107.mp4", "path": "../dataset/V_107.mp4", "address": "99, Civil Lines, Jaipur, Rajasthan"},
+    {"video_id": "V_108.mp4", "path": "../dataset/V_108.mp4", "address": "33, Hazratganj, Lucknow, Uttar Pradesh"},
+    {"video_id": "V_109.mp4", "path": "../dataset/V_109.mp4", "address": "56, Ernakulam South, Kochi, Kerala"},
+    {"video_id": "V_110.mp4", "path": "../dataset/V_110.mp4", "address": "8, Shivaji Nagar, Pune, Maharashtra"},
+    {"video_id": "V_1000.mp4", "path": "../dataset/V_1000.mp4", "address": "25, Lal Chowk, Srinagar, Jammu and Kashmir"}
 ]
 
 @app.route('/')
@@ -201,7 +201,7 @@ def process_single_video(video_path):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default='public/violence_detection_model.h5')
+    parser.add_argument('--model', type=str, default='/home/dragon/Durgesh/Code-Crafter-BrosJS/public/violence_detection_model.h5')
     parser.add_argument('--port', type=int, default=8000)
     parser.add_argument('--host', type=str, default='0.0.0.0')
     args = parser.parse_args()

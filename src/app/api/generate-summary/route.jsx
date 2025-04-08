@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI('AIzaSyDv2g2QvGmdw4smcgZUBaIuth65ubqsQ-o');
 
 export async function POST(request) {
   try {
@@ -30,12 +30,17 @@ export async function POST(request) {
     };
 
     const result = await model.generateContent([
-      "Summarize the key events and information presented in the uploaded video.If there is any important frames make sure to brief it little.Don't give any type of punctuation.",
+      `I’m uploading a video. Please watch the full video and provide a summary of the major events or important moments that occur.
+      For each key event or turning point, include:
+      A brief description of what happens
+      The timestamp (in hh:mm:ss format) when the event starts
+      Optionally, when it ends (if applicable)
+      Make sure the summary is concise but informative, highlighting only the most relevant and meaningful parts of the video.`,
       filePart,
     ]);
 
     const response = await result.response;
-    const summary = response.text();
+    const summary = response.text().replaceAll('*', '');
 
     return NextResponse.json({ summary });
   } catch (error) {

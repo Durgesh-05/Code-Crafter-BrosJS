@@ -113,7 +113,7 @@ function Page() {
 
       const apiKey =
         process.env.NEXT_PUBLIC_GEMINI_API_KEY ||
-        'AIzaSyDB9gtQuwLTOsAxOQFsfD4I2Hc_QNx6d_A';
+        'AIzaSyDv2g2QvGmdw4smcgZUBaIuth65ubqsQ-o';
       const genAI = new GoogleGenerativeAI(apiKey);
 
       const model = genAI.getGenerativeModel({
@@ -168,7 +168,7 @@ function Page() {
     const encodedAddress = encodeURIComponent(address);
     const apiKey =
       process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ||
-      'AIzaSyCb4aE_i6ANsLCSaGLt3NuUqkDdkcbkV7o';
+      'AIzaSyCNh794xDojP-zMuFGikcPg28hSLQKWpD8';
     const geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}&key=${apiKey}`;
 
     try {
